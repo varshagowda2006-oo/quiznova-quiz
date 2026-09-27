@@ -1,0 +1,22 @@
+{
+  "overview": "QuizNova is a polished, fully client-side interactive mock test with a name-gated welcome screen, 10 shuffled technology questions, a 10-minute countdown, and a rich results and answer-review experience.",
+  "features": [
+    "Enter your name to start a personalized quiz",
+    "Answer 10 multiple-choice technology questions one at a time",
+    "10-minute countdown that auto-submits when time runs out",
+    "Jump between questions with a navigation grid that marks answered and unanswered",
+    "Confirm before submitting, with answers preserved if you cancel",
+    "See your score, percentage and correct/incorrect/unanswered breakdown",
+    "Review every question with your answer and the correct answer",
+    "Retake the quiz with freshly shuffled questions"
+  ],
+  "category": "quiz-app",
+  "tags": [
+    "quiz",
+    "education",
+    "technology",
+    "interactive",
+    "responsive"
+  ],
+  "last_updated": "2026-09-27T06:03:49.153Z"
+}

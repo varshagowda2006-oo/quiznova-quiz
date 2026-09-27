@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/assets/fonts/SpaceGrotesk.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/assets/fonts/DMSans.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/assets/fonts/JetBrainsMono.woff2") format("woff2");
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --font-display: "Space Grotesk";
+    --font-body: "DM Sans";
+    --font-mono: "JetBrains Mono";
+    --radius: 1.125rem;
+
+    /* Aurora Arcade — light */
+    --background: 0.975 0.008 265;
+    --foreground: 0.19 0.03 275;
+    --card: 1.0 0.002 265;
+    --card-foreground: 0.19 0.03 275;
+    --popover: 1.0 0.002 265;
+    --popover-foreground: 0.19 0.03 275;
+
+    --primary: 0.62 0.19 132;
+    --primary-foreground: 0.18 0.05 132;
+
+    --secondary: 0.93 0.014 265;
+    --secondary-foreground: 0.28 0.03 275;
+    --muted: 0.93 0.014 265;
+    --muted-foreground: 0.5 0.02 270;
+
+    --accent: 0.62 0.13 205;
+    --accent-foreground: 0.98 0.006 205;
+
+    --destructive: 0.58 0.21 22;
+    --destructive-foreground: 0.98 0.006 22;
+    --success: 0.6 0.16 152;
+    --success-foreground: 0.98 0.006 152;
+    --warning: 0.72 0.15 78;
+    --warning-foreground: 0.2 0.04 78;
+
+    --border: 0.9 0.012 265;
+    --input: 0.9 0.012 265;
+    --ring: 0.62 0.19 132;
+
+    --chart-1: 0.62 0.19 132;
+    --chart-2: 0.62 0.13 205;
+    --chart-3: 0.55 0.2 275;
+    --chart-4: 0.72 0.15 78;
+    --chart-5: 0.58 0.21 22;
+
+    --sidebar: 0.965 0.01 265;
+    --sidebar-foreground: 0.19 0.03 275;
+    --sidebar-primary: 0.62 0.19 132;
+    --sidebar-primary-foreground: 0.18 0.05 132;
+    --sidebar-accent: 0.93 0.014 265;
+    --sidebar-accent-foreground: 0.28 0.03 275;
+    --sidebar-border: 0.9 0.012 265;
+    --sidebar-ring: 0.62 0.19 132;
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      oklch(0.68 0.2 128) 0%,
+      oklch(0.6 0.16 158) 100%
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      oklch(0.66 0.15 200) 0%,
+      oklch(0.58 0.16 250) 100%
+    );
+    --gradient-surface: linear-gradient(
+      160deg,
+      oklch(1.0 0.002 265) 0%,
+      oklch(0.965 0.012 265) 100%
+    );
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-color: 265 0.03 275;
+  }
+
+  .dark {
+    /* Aurora Arcade — dark (primary) */
+    --background: 0.16 0.028 275;
+    --foreground: 0.96 0.01 265;
+    --card: 0.205 0.03 275;
+    --card-foreground: 0.96 0.01 265;
+    --popover: 0.23 0.032 275;
+    --popover-foreground: 0.96 0.01 265;
+
+    --primary: 0.86 0.19 128;
+    --primary-foreground: 0.17 0.05 128;
+
+    --secondary: 0.26 0.03 275;
+    --secondary-foreground: 0.88 0.012 265;
+    --muted: 0.26 0.03 275;
+    --muted-foreground: 0.66 0.02 268;
+
+    --accent: 0.76 0.13 200;
+    --accent-foreground: 0.16 0.03 200;
+
+    --destructive: 0.66 0.19 22;
+    --destructive-foreground: 0.16 0.03 22;
+    --success: 0.72 0.17 152;
+    --success-foreground: 0.16 0.03 152;
+    --warning: 0.8 0.15 82;
+    --warning-foreground: 0.18 0.04 82;
+
+    --border: 0.3 0.032 275;
+    --input: 0.3 0.032 275;
+    --ring: 0.86 0.19 128;
+
+    --chart-1: 0.86 0.19 128;
+    --chart-2: 0.76 0.13 200;
+    --chart-3: 0.68 0.18 285;
+    --chart-4: 0.8 0.15 82;
+    --chart-5: 0.66 0.19 22;
+
+    --sidebar: 0.185 0.03 275;
+    --sidebar-foreground: 0.96 0.01 265;
+    --sidebar-primary: 0.86 0.19 128;
+    --sidebar-primary-foreground: 0.17 0.05 128;
+    --sidebar-accent: 0.26 0.03 275;
+    --sidebar-accent-foreground: 0.88 0.012 265;
+    --sidebar-border: 0.3 0.032 275;
+    --sidebar-ring: 0.86 0.19 128;
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      oklch(0.88 0.19 126) 0%,
+      oklch(0.74 0.17 158) 100%
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      oklch(0.78 0.14 198) 0%,
+      oklch(0.66 0.17 250) 100%
+    );
+    --gradient-surface: linear-gradient(
+      160deg,
+      oklch(0.225 0.032 275) 0%,
+      oklch(0.19 0.028 275) 100%
+    );
+    --shadow-color: 275 0.05 275;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .bg-gradient-accent {
+    background-image: var(--gradient-accent);
+  }
+
+  .bg-gradient-surface {
+    background-image: var(--gradient-surface);
+  }
+
+  .text-gradient-primary {
+    background-image: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .shadow-subtle {
+    box-shadow: 0 1px 2px oklch(var(--shadow-color) / 0.08), 0 4px 12px -4px
+      oklch(var(--shadow-color) / 0.1);
+  }
+
+  .shadow-elevated {
+    box-shadow: 0 2px 4px oklch(var(--shadow-color) / 0.1), 0 12px 32px -8px
+      oklch(var(--shadow-color) / 0.22);
+  }
+
+  .shadow-lift {
+    box-shadow: 0 4px 8px oklch(var(--shadow-color) / 0.12), 0 24px 56px -12px
+      oklch(var(--shadow-color) / 0.3);
+  }
+
+  .bg-grid-dots {
+    background-image: radial-gradient(
+      oklch(var(--muted-foreground) / 0.18) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 0 1px oklch(var(--primary) / 0.35), 0 8px 32px -8px
+      oklch(var(--primary) / 0.45);
+  }
+}
